@@ -1,12 +1,13 @@
 {
-  "vendor": "storeframework",
-  "name": "store-theme",
+  "vendor": "larplasticos",
+  "name": "faststore-vtex-integrations",
   "version": "2.3.0",
   "builders": {
     "styles": "2.x",
     "store": "0.x",
     "docs": "0.x",
-    "assets": "0.x"
+    "assets": "0.x",
+    "pixel": "0.x"
   },
   "scripts": {
     "postreleasy": "vtex publish --verbose"
@@ -29,7 +30,8 @@
     "vtex.sticky-layout": "0.x",
     "vtex.order-placed": "2.x",
     "vtex.responsive-layout": "0.x",
-    "vtex.store-footer": "2.x"
+    "vtex.store-footer": "2.x",
+    "vtex.pixel-interfaces": "1.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

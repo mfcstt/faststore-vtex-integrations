@@ -7,7 +7,8 @@
     "props": {
       "isInitialScreenOptionOnly": false,
       "defaultOption": 1,
-      "showPasswordVerificationIntoTooltip": true
+      "showPasswordVerificationIntoTooltip": true,
+      "returnUrl": "https://larplasticos.vtex.app/"
     }
   }
 }
