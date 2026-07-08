@@ -1,0 +1,5 @@
+.imageElement--certificado {
+  width: auto;
+  object-fit: contain;
+  margin: 0 20px;
+}

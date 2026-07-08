@@ -1,0 +1,209 @@
+/* ==========================================
+   0. ESTRUTURA GERAL (MOBILE FIRST & RESPONSIVO)
+   ========================================== */
+
+/* Container principal - Empilha no mobile e alinha no desktop */
+:global(.vtex-login-2-x-contentAlwaysWithOptions) {
+  display: flex !important;
+  flex-direction: column !important; /* Padrão mobile: um embaixo do outro */
+  gap: 32px !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  padding: 24px 16px !important;
+}
+
+/* Colunas (Formulário e Opções) */
+:global(.vtex-login-2-x-contentForm),
+:global(.vtex-login-2-x-accessOptions) {
+  width: 100% !important;
+}
+
+/* Layout para Desktop (Telas maiores que 768px) */
+@media (min-width: 768px) {
+  :global(.vtex-login-2-x-contentAlwaysWithOptions) {
+    flex-direction: row !important; /* Padrão desktop: lado a lado */
+    gap: 48px !important;
+    padding: 40px !important;
+  }
+  
+  :global(.vtex-login-2-x-contentForm),
+  :global(.vtex-login-2-x-accessOptions) {
+    flex: 1 !important; /* Ocupam espaços iguais fluidos, melhor que 50% */
+  }
+}
+
+
+/* ==========================================
+   1. COLUNA ESQUERDA: PADRONIZAÇÃO DE BOTÕES
+   ========================================== */
+
+/* NOVA REGRA: Espaçamento entre os botões da coluna esquerda */
+:global(.vtex-login-2-x-accessOptionsProvidersList) {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important; /* Define o respiro entre os botões sociais/código */
+}
+
+/* Garante que itens da lista não tenham margens nativas atrapalhando o gap */
+:global(.vtex-login-2-x-listItem) {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+/* Base de todos os botões de opções de acesso */
+:global(.vtex-login-2-x-accessOptionsProvidersList) :global(.vtex-button) {
+  height: 48px !important;
+  min-height: 48px !important;
+  border-radius: 12px !important; /* Aumentado para 12px (mais arredondado) */
+  transition: all 0.2s ease !important;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05) !important; /* Toque de UI: sombra sutil */
+}
+
+/* Limpa textos, remove caixa alta e padroniza tipografia */
+:global(.vtex-login-2-x-accessOptionsProvidersList) :global(.vtex-button__label) *,
+:global(.vtex-login-2-x-accessOptionsProvidersList) :global(.vtex-button__label) span,
+:global(.vtex-login-2-x-accessOptionsProvidersList) :global(.vtex-button__label) {
+  text-transform: none !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+}
+
+
+/* --- GOOGLE (Estilo Clean Branco) --- */
+:global(.vtex-login-2-x-googleOptionBtn) :global(.vtex-button) {
+  background-color: #ffffff !important;
+  border: 1px solid #D0D5DD !important;
+}
+
+:global(.vtex-login-2-x-googleOptionBtn) :global(.vtex-button__label) * {
+  color: #344054 !important;
+}
+
+:global(.vtex-login-2-x-googleOptionBtn) :global(svg) {
+  color: #475467 !important;
+  fill: #475467 !important;
+}
+
+:global(.vtex-login-2-x-googleOptionBtn) :global(.vtex-button):hover {
+  background-color: #F9FAFB !important;
+  border-color: #01A032 !important;
+}
+
+
+/* --- CÓDIGO POR EMAIL & ENTRAR COM EMAIL E SENHA (Agrupados - Fundo Verde Claro) --- */
+:global(.vtex-login-2-x-accessCodeOptionBtn) :global(.vtex-button),
+:global(.vtex-login-2-x-emailPasswordOptionBtn) :global(.vtex-button) {
+  background-color: #01A032 !important; 
+  border: 1px solid #01A032 !important; 
+}
+
+:global(.vtex-login-2-x-accessCodeOptionBtn) :global(.vtex-button__label) *,
+:global(.vtex-login-2-x-emailPasswordOptionBtn) :global(.vtex-button__label) * {
+  color: #ffffff !important; 
+  font-weight: 600 !important; 
+}
+
+:global(.vtex-login-2-x-accessCodeOptionBtn) :global(svg),
+:global(.vtex-login-2-x-accessCodeOptionBtn) :global(svg) *,
+:global(.vtex-login-2-x-emailPasswordOptionBtn) :global(svg),
+:global(.vtex-login-2-x-emailPasswordOptionBtn) :global(svg) * {
+  color: #166534 !important;
+  fill: #166534 !important;
+  stroke: transparent !important;
+}
+
+:global(.vtex-login-2-x-accessCodeOptionBtn) :global(.vtex-button):hover,
+:global(.vtex-login-2-x-emailPasswordOptionBtn) :global(.vtex-button):hover {
+  background-color: #0F5F28 !important; 
+  border-color: #0F5F28 !important;
+}
+
+
+/* --- EXCEÇÃO: FACEBOOK (Azul Oficial) --- */
+:global(.vtex-login-2-x-facebookOptionBtn) :global(.vtex-button) {
+  background-color: #1877F2 !important;
+  border: 1px solid #1877F2 !important;
+}
+
+:global(.vtex-login-2-x-facebookOptionBtn) :global(.vtex-button__label) *,
+:global(.vtex-login-2-x-facebookOptionBtn) :global(.vtex-button__label) span,
+:global(.vtex-login-2-x-facebookOptionBtn) :global(svg),
+:global(.vtex-login-2-x-facebookOptionBtn) :global(svg) *,
+:global(.vtex-login-2-x-facebookOptionBtn) :global(.vtex__icon-facebook) {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+:global(.vtex-login-2-x-facebookOptionBtn) :global(.vtex-button):hover {
+  background-color: #166FE5 !important;
+  border-color: #166FE5 !important;
+}
+
+
+/* ==========================================
+   2. COLUNA DIREITA: INPUTS E BOTÃO PRINCIPAL
+   ========================================== */
+
+/* Inputs de digitação (Email e Senha) */
+:global(.vtex-input-prefix__group) {
+  border-radius: 12px !important; /* Acompanhando o arredondamento dos botões */
+  border: 1px solid #D0D5DD !important;
+  height: 48px !important;
+  background-color: #ffffff !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Foco no input (Acessibilidade) */
+:global(.vtex-input-prefix__group):focus-within {
+  border-color: #16A34A !important;
+  box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.15) !important;
+}
+
+:global(.vtex-styleguide-9-x-input) {
+  font-size: 15px !important;
+  color: #101828 !important;
+}
+
+/* Botão principal de ENTRAR (Verde Sólido) */
+:global(.vtex-login-2-x-sendButton) :global(.vtex-button) {
+  background-color: #01A032 !important;
+  border: 1px solid #01A032 !important;
+  border-radius: 12px !important; /* Acompanhando o arredondamento */
+  height: 48px !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05) !important;
+}
+
+:global(.vtex-login-2-x-sendButton) :global(.vtex-button__label) span {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  letter-spacing: 0.5px !important;
+}
+
+:global(.vtex-login-2-x-sendButton) :global(.vtex-button):hover:not(:disabled) {
+  background-color: #0F5F28 !important;
+  border-color: #0F5F28 !important;
+}
+
+
+/* ==========================================
+   3. LINKS SECUNDÁRIOS (Esqueci a senha / Cadastro)
+   ========================================== */
+
+:global(.vtex-login-2-x-forgotPasswordLink),
+:global(.vtex-login-2-x-dontHaveAccount) {
+  color: #01A032 !important; 
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  transition: color 0.2s ease !important;
+}
+
+:global(.vtex-login-2-x-forgotPasswordLink):hover,
+:global(.vtex-login-2-x-dontHaveAccount):hover {
+  color: #01A032 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 4px !important;
+}
