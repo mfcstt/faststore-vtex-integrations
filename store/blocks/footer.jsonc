@@ -1,0 +1,333 @@
+{
+  "footer": {
+    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
+  },
+  "footer-layout.desktop": {
+    "props": {
+      "backgroundColor": "#09090b",
+      "borderTopLeftRadius": "16px",
+      "borderTopRightRadius": "16px"
+    },
+    "children": ["flex-layout.row#footer-desktop"]
+  },
+  "flex-layout.row#footer-desktop": {
+    "props": {
+      "blockClass": "footer-row",
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "verticalAlign": "middle",
+      "colGap": 7
+    },
+    "children": ["flex-layout.col#logo-15anos", "flex-layout.col#certificados", "flex-layout.col#pagamentos"]
+  },
+  "flex-layout.col#logo-15anos": {
+    "props": {
+      "verticalAlign": "middle",
+      "horizontalAlign": "center"
+    },
+    "children": ["image#15anos"]
+  },
+  "image#15anos": {
+    "props": {
+      "src": "assets/15Anos.svg",
+      "maxHeight": "220px",
+      "alt": "15 Anos"
+    }
+  },
+  "flex-layout.col#certificados": {
+    "props": {
+      "verticalAlign": "middle",
+      "horizontalAlign": "left"
+    },
+    "children": ["rich-text#certificacoes-title", "flex-layout.row#certificados-images"]
+  },
+  "rich-text#certificacoes-title": {
+    "props": {
+      "text": "**CERTIFICAÇÕES**",
+      "textColor": "white",
+      "textAlignment": "LEFT",
+      "blockClass": "certificacoes-title"
+    }
+  },
+  "flex-layout.row#certificados-images": {
+    "props": {
+      "blockClass": "certificados-images",
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "left",
+      "verticalAlign": "middle",
+      "colGap": 5
+    },
+    "children": ["image#abiplast", "image#eucertplast", "image#iso"]
+  },
+  "image#abiplast": {
+    "props": {
+      "src": "assets/Abiplast.svg",
+      "maxHeight": "80px",
+      "alt": "Abiplast",
+      "blockClass": "certificado"
+    }
+  },
+  "image#eucertplast": {
+    "props": {
+      "src": "assets/EuCertPlast.svg",
+      "maxHeight": "80px",
+      "alt": "EuCertPlast",
+      "blockClass": "certificado"
+    }
+  },
+  "image#iso": {
+    "props": {
+      "src": "assets/Iso.svg",
+      "maxHeight": "80px",
+      "alt": "ISO",
+      "blockClass": "certificado"
+    }
+  },
+  "rich-text#pagamentos-title": {
+    "props": {
+      "text": "**FORMAS DE PAGAMENTO**",
+      "textColor": "white",
+      "textAlignment": "LEFT",
+      "blockClass": "pagamentos-title"
+    }
+  },
+  "flex-layout.row#pagamentos-images": {
+    "props": {
+      "blockClass": "pagamentos-images",
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "left",
+      "verticalAlign": "middle",
+      "colGap": 4
+    },
+    "children": ["image#pix", "image#visa", "image#mastercard", "image#hipercard", "image#american-express", "image#elo", "image#boleto"]
+  },
+  "image#pix": {
+    "props": {
+      "src": "assets/pix___73c76fe25eba8d19a64cb459b1e3bb35.svg",
+      "maxHeight": "50px",
+      "alt": "Pix",
+      "blockClass": "pagamento"
+    }
+  },
+  "image#visa": {
+    "props": {
+      "src": "assets/visa___44e838949c076b536ef3a81cb32563a7.svg",
+      "maxHeight": "50px",
+      "alt": "Visa",
+      "blockClass": "pagamento"
+    }
+  },
+  "image#mastercard": {
+    "props": {
+      "src": "assets/mastercard___8f9111436e03fa049ae4b5a2c0ff9f0b.svg",
+      "maxHeight": "50px",
+      "alt": "Mastercard",
+      "blockClass": "pagamento"
+    }
+  },
+  "image#hipercard": {
+    "props": {
+      "src": "assets/hipercard___8e48e9f4af74ee3f67b9365b482b71eb.svg",
+      "maxHeight": "50px",
+      "alt": "Hipercard",
+      "blockClass": "pagamento"
+    }
+  },
+  "image#american-express": {
+    "props": {
+      "src": "assets/american-express___1d4001ce36e817645affd60f60b3f558.svg",
+      "maxHeight": "50px",
+      "alt": "American Express",
+      "blockClass": "pagamento"
+    }
+  },
+  "image#elo": {
+    "props": {
+      "src": "assets/elo___ce07a526f337f930065d34cc3914cd98.svg",
+      "maxHeight": "50px",
+      "alt": "Elo",
+      "blockClass": "pagamento"
+    }
+  },
+  "image#boleto": {
+    "props": {
+      "src": "assets/boleto___a4ea208f4f11905ad714ec0d957783c3.svg",
+      "maxHeight": "50px",
+      "alt": "Boleto",
+      "blockClass": "pagamento"
+    }
+  },
+  "flex-layout.col#pagamentos": {
+    "props": {
+      "verticalAlign": "middle",
+      "horizontalAlign": "left"
+    },
+    "children": ["rich-text#pagamentos-title", "flex-layout.row#pagamentos-images"]
+  },
+  "footer-layout.mobile": {
+    "props": {
+      "backgroundColor": "#09090b",
+      "borderTopLeftRadius": "16px",
+      "borderTopRightRadius": "16px"
+    },
+    "children": ["flex-layout.row#footer-mobile"]
+  },
+  "flex-layout.row#footer-mobile": {
+    "props": {
+      "blockClass": "footer-row",
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "center",
+      "verticalAlign": "middle"
+    },
+    "children": ["flex-layout.col#logo-15anos-mobile", "flex-layout.col#certificados-mobile", "flex-layout.col#pagamentos-mobile"]
+  },
+  "flex-layout.col#logo-15anos-mobile": {
+    "props": {
+      "verticalAlign": "middle",
+      "horizontalAlign": "center"
+    },
+    "children": ["image#15anos-mobile"]
+  },
+  "image#15anos-mobile": {
+    "props": {
+      "src": "assets/15Anos.svg",
+      "maxHeight": "140px",
+      "alt": "15 Anos"
+    }
+  },
+  "flex-layout.col#certificados-mobile": {
+    "props": {
+      "verticalAlign": "middle",
+      "horizontalAlign": "left"
+    },
+    "children": ["rich-text#certificacoes-title-mobile", "flex-layout.row#certificados-images-mobile"]
+  },
+  "rich-text#certificacoes-title-mobile": {
+    "props": {
+      "text": "**Certificações**",
+      "textColor": "white",
+      "textAlignment": "LEFT",
+      "blockClass": "certificacoes-title"
+    }
+  },
+  "flex-layout.row#certificados-images-mobile": {
+    "props": {
+      "blockClass": "certificados-images",
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "left",
+      "verticalAlign": "middle",
+      "colGap": 3
+    },
+    "children": ["image#abiplast-mobile", "image#eucertplast-mobile", "image#iso-mobile"]
+  },
+  "image#abiplast-mobile": {
+    "props": {
+      "src": "assets/Abiplast.svg",
+      "maxHeight": "60px",
+      "alt": "Abiplast",
+      "blockClass": "certificado"
+    }
+  },
+  "image#eucertplast-mobile": {
+    "props": {
+      "src": "assets/EuCertPlast.svg",
+      "maxHeight": "60px",
+      "alt": "EuCertPlast",
+      "blockClass": "certificado"
+    }
+  },
+  "image#iso-mobile": {
+    "props": {
+      "src": "assets/Iso.svg",
+      "maxHeight": "60px",
+      "alt": "ISO",
+      "blockClass": "certificado"
+    }
+  },
+  "rich-text#pagamentos-title-mobile": {
+    "props": {
+      "text": "**FORMAS DE PAGAMENTO**",
+      "textColor": "white",
+      "textAlignment": "LEFT",
+      "blockClass": "pagamentos-title"
+    }
+  },
+  "flex-layout.row#pagamentos-images-mobile": {
+    "props": {
+      "blockClass": "pagamentos-images",
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "left",
+      "verticalAlign": "middle",
+      "colGap": 3
+    },
+    "children": ["image#pix-mobile", "image#visa-mobile", "image#mastercard-mobile", "image#hipercard-mobile", "image#american-express-mobile", "image#elo-mobile", "image#boleto-mobile"]
+  },
+  "image#pix-mobile": {
+    "props": {
+      "src": "assets/pix___73c76fe25eba8d19a64cb459b1e3bb35.svg",
+      "maxHeight": "40px",
+      "alt": "Pix",
+      "blockClass": "pagamento"
+    }
+  },
+  "image#visa-mobile": {
+    "props": {
+      "src": "assets/visa___44e838949c076b536ef3a81cb32563a7.svg",
+      "maxHeight": "40px",
+      "alt": "Visa",
+      "blockClass": "pagamento"
+    }
+  },
+  "image#mastercard-mobile": {
+    "props": {
+      "src": "assets/mastercard___8f9111436e03fa049ae4b5a2c0ff9f0b.svg",
+      "maxHeight": "40px",
+      "alt": "Mastercard",
+      "blockClass": "pagamento"
+    }
+  },
+  "image#hipercard-mobile": {
+    "props": {
+      "src": "assets/hipercard___8e48e9f4af74ee3f67b9365b482b71eb.svg",
+      "maxHeight": "40px",
+      "alt": "Hipercard",
+      "blockClass": "pagamento"
+    }
+  },
+  "image#american-express-mobile": {
+    "props": {
+      "src": "assets/american-express___1d4001ce36e817645affd60f60b3f558.svg",
+      "maxHeight": "40px",
+      "alt": "American Express",
+      "blockClass": "pagamento"
+    }
+  },
+  "image#elo-mobile": {
+    "props": {
+      "src": "assets/elo___ce07a526f337f930065d34cc3914cd98.svg",
+      "maxHeight": "40px",
+      "alt": "Elo",
+      "blockClass": "pagamento"
+    }
+  },
+  "image#boleto-mobile": {
+    "props": {
+      "src": "assets/boleto___a4ea208f4f11905ad714ec0d957783c3.svg",
+      "maxHeight": "40px",
+      "alt": "Boleto",
+      "blockClass": "pagamento"
+    }
+  },
+  "flex-layout.col#pagamentos-mobile": {
+    "props": {
+      "verticalAlign": "middle",
+      "horizontalAlign": "left"
+    },
+    "children": ["rich-text#pagamentos-title-mobile", "flex-layout.row#pagamentos-images-mobile"]
+  }
+}

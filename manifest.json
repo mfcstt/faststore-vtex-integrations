@@ -21,13 +21,15 @@
     "vtex.store": "2.x",
     "vtex.store-header": "2.x",
     "vtex.store-components": "3.x",
+    "vtex.store-image": "0.x",
     "vtex.login": "2.x",
     "vtex.my-account": "1.x",
     "vtex.flex-layout": "0.x",
     "vtex.rich-text": "0.x",
     "vtex.sticky-layout": "0.x",
     "vtex.order-placed": "2.x",
-    "vtex.responsive-layout": "0.x"
+    "vtex.responsive-layout": "0.x",
+    "vtex.store-footer": "2.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

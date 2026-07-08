@@ -33,6 +33,7 @@
       "fullWidth": true
     },
     "children": [
+      "flex-layout.col#spacer",
       "flex-layout.col#logo-desktop",
       "flex-layout.col#spacer"
     ]
@@ -46,7 +47,7 @@
   "logo#desktop": {
     "props": {
       "title": "Logo",
-      "href": "https://www.vtexfaststore.com/",
+      "href": "https://larplasticos.vtex.app/",
       "url": "assets/logo.svg",
       "width": "180"
     }
@@ -61,6 +62,7 @@
   },
   "flex-layout.row#1-mobile": {
     "children": [
+      "flex-layout.col#spacer",
       "logo#mobile",
       "flex-layout.col#spacer"
     ],
